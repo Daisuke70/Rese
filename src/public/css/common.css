@@ -10,6 +10,12 @@ body, html {
     background-color: #EEEEEE;
 }
 
+.hamburger-wrapper {
+    display: flex;
+    align-items: center;
+    transform: translate(110px, 30px);
+}
+
 .hamburger-menu {
     display: flex;
     flex-direction: column;
@@ -18,7 +24,6 @@ body, html {
     width: 40px;
     height: 40px;
     border-radius: 5px;
-    transform: translate(110px, 30px);
     cursor: pointer;
     background: #305DFF;
     transition: transform 0.3s;
@@ -50,6 +55,19 @@ body, html {
     background-color: white;
     margin-bottom: 4px;
     transition: background-color 0.3s;
+}
+
+.site-title {
+    font-size: 32px;
+    color: #305DFF;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.body--menu-open .site-title {
+    opacity: 0;
+    visibility: hidden;
 }
 
 .hamburger-menu.active .hamburger-line__1 {

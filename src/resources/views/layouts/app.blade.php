@@ -10,10 +10,13 @@
 <body>
     <div class="app">
         <header class="header">
-            <div class="hamburger-menu" onclick="toggleMenu(this)">
-                <div class="hamburger-line__1"></div>
-                <div class="hamburger-line__2"></div>
-                <div class="hamburger-line__3"></div>
+            <div class="hamburger-wrapper">
+                <div class="hamburger-menu" onclick="toggleMenu(this)">
+                    <div class="hamburger-line__1"></div>
+                    <div class="hamburger-line__2"></div>
+                    <div class="hamburger-line__3"></div>
+                </div>
+                <span class="site-title">Rese</span>
             </div>
 
             <ul class="menu">
