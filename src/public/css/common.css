@@ -1,3 +1,15 @@
+body, html {
+    background-color: #EEEEEE;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.app {
+    min-height: 100vh;
+    background-color: #EEEEEE;
+}
+
 .hamburger-menu {
     display: flex;
     flex-direction: column;
@@ -6,6 +18,7 @@
     width: 40px;
     height: 40px;
     border-radius: 5px;
+    transform: translate(110px, 30px);
     cursor: pointer;
     background: #305DFF;
     transition: transform 0.3s;
@@ -55,8 +68,37 @@
 
 .menu {
     display: none;
-    background-color: #f0f0f0;
-    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -80%);
+    background-color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    list-style: none;
+}
+
+.app.body--menu-open {
+    background-color: #ffffff !important;
+}
+
+.menu-home {
+    margin-bottom: 35px;
+}
+
+.menu-register {
+    margin-bottom: 35px;
+}
+
+.menu-login {
+    margin-bottom: 35px;
+}
+
+a {
+    text-decoration: none;
+    color: #305DFF;
+    font-size: 32px;
 }
 
 .active + .menu {
