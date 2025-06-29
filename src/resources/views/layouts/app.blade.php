@@ -21,8 +21,8 @@
 
             <ul class="menu">
                 <li class="menu-home"><a href="">Home</a></li>
-                <li class="menu-register"><a href="">Registration</a></li>                
-                <li class="menu-login"><a href="">Login</a></li>
+                <li class="menu-register"><a href="{{ route('show.register')}}">Registration</a></li>
+                <li class="menu-login"><a href="{{ route('show.login')}}">Login</a></li>
             </ul>
 
             <script>

@@ -16,43 +16,43 @@
                 @csrf
                 <div class="register-form__group--wrapper">
                     <img src="{{ asset('/images/user.png') }}" alt="" aria-hidden="true" class="user-img">
-                    <div class="register-form__group">
+                    <div class="register-form__group--username">
                         <label class="register-form__label" for="name">Username</label>
-                        <input class="register-form__input" type="text" name="name"
+                        <input class="register-form__input--username" type="text" name="name"
                             id="name" value="{{ old('name') }}" autocomplete="username"
                             @error('name') aria-describedby="name-error" @enderror
                         />
-                        @error('name')
-                            <p id="name-error" class="register-form__error-message">{{ $message }}</p>
-                        @enderror
                     </div>
                 </div>
+                @error('name')
+                    <p id="name-error" class="register-form__error-message">{{ $message }}</p>
+                @enderror
                 <div class="register-form__group--wrapper">
                     <img src="{{ asset('/images/email.png') }}" alt="" aria-hidden="true" class="email-img">
-                    <div class="register-form__group">
+                    <div class="register-form__group--email">
                         <label class="register-form__label" for="email">Email</label>
-                        <input class="register-form__input" type="text" name="email"
+                        <input class="register-form__input--email" type="text" name="email"
                             id="email" value="{{ old('email') }}" autocomplete="email"
                             @error('name') aria-describedby="email-error" @enderror
                         />
-                        @error('email')
-                            <p id="email-error" class="register-form__error-message">{{ $message }}</p>
-                        @enderror
                     </div>
                 </div>
+                @error('email')
+                    <p id="email-error" class="register-form__error-message">{{ $message }}</p>
+                @enderror
                 <div class="register-form__group--wrapper">
                     <img src="{{ asset('/images/key.png') }}" alt="" aria-hidden="true" class="key-img">
-                    <div class="register-form__group">
+                    <div class="register-form__group--password">
                         <label class="register-form__label" for="password">Password</label>
-                        <input class="register-form__input" type="password" name="password"
+                        <input class="register-form__input--password" type="password" name="password"
                             id="password" value="{{ old('password') }}" autocomplete="password"
                             @error('password') aria-describedby="password-error" @enderror
                         />
-                        @error('password')
-                            <p id="password-error" class="register-form__error-message">{{ $message }}</p>
-                        @enderror
                     </div>
                 </div>
+                @error('password')
+                    <p id="password-error" class="register-form__error-message">{{ $message }}</p>
+                @enderror
                 <div class="register-form__button">
                     <input class="register-form__submit" type="submit" value="登録">
                 </div>

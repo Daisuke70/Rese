@@ -1,0 +1,30 @@
+.thanks-content {
+    width: 470px;
+    box-shadow: 3px 3px 3px #A7A7A7;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -110%);
+    background-color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+}
+
+.thanks-content p {
+    margin-top: 90px;
+    font-size: 25px;
+}
+
+.thanks-content__login-button {
+    margin: 50px 0px 100px 0px;
+}
+
+.thanks-content__login-link {
+    color: #FFFFFF;
+    background: #305DFF;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 5px;
+}

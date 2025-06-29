@@ -13,7 +13,7 @@ body, html {
 .hamburger-wrapper {
     display: flex;
     align-items: center;
-    transform: translate(110px, 30px);
+    transform: translate(110px, 40px);
 }
 
 .hamburger-menu {

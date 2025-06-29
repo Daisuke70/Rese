@@ -1,11 +1,11 @@
 .register-form {
-    width: 390px;
+    width: 470px;
     box-shadow: 3px 3px 3px #A7A7A7;
     border-radius: 5px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-55%, -80%);
+    transform: translate(-50%, -60%);
     background-color: #FFFFFF;
     padding: 0;
     margin: 0;
@@ -15,16 +15,100 @@
     background: #305DFF;
     color: #FFFFFF;
     padding: 1px 25px;
+    font-size: 18px;
     border-radius: 5px 5px 0px 0px;
 }
 
 .register-form__group--wrapper {
     display: flex;
     flex-direction: row;
-    margin-top: 30px;
+    margin: 20px 0px 0px 30px;
 }
 
 .user-img {
-    width: 40px;
-    height: 45px;
+    width: 36px;
+    height: 41px;
+}
+
+.register-form__group--username {
+    margin: 12px 0px 0px 13px;
+    border-bottom: 1px solid;
+    width: 350px;
+}
+
+.register-form__label {
+    color: #757575;
+}
+
+.register-form__input--username {
+    width: 248px;
+    font-size: 15px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+}
+
+input:-webkit-autofill {
+    box-shadow: 0 0 0 1000px white inset;
+}
+
+.email-img {
+    width: 36px;
+    height: 26px;
+}
+
+.register-form__group--email {
+    margin: 3px 0px 0px 13px;
+    border-bottom: 1px solid;
+    width: 350px;
+}
+
+.register-form__input--email {
+    width: 248px;
+    font-size: 15px;
+    padding-left: 10px;
+    transform: translateX(40px);
+    border: none;
+    outline: none;
+}
+
+.key-img {
+    width: 26px;
+    height: 36px;
+    margin-left: 5px;
+}
+
+.register-form__group--password {
+    margin: 8px 0px 0px 18px;
+    border-bottom: 1px solid;
+    width: 350px;
+}
+
+.register-form__input--password {
+    width: 248px;
+    padding-left: 8px;
+    transform: translate(5px, 1px);
+    border: none;
+    outline: none;
+}
+
+.register-form__button {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 30px 40px 30px 0px;
+}
+
+.register-form__submit {
+    background: #305DFF;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 5px 18px;
+}
+
+.register-form__error-message {
+    color: red;
+    width: 350px;
+    margin: 5px 0px 0px 78px;
 }
