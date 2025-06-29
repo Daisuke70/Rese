@@ -20,11 +20,25 @@
             </div>
 
             <ul class="menu">
-                <li class="menu-home"><a href="">Home</a></li>
-                <li class="menu-register"><a href="{{ route('show.register')}}">Registration</a></li>
-                <li class="menu-login"><a href="{{ route('show.login')}}">Login</a></li>
-            </ul>
+                @guest
+                    <li class="menu-home"><a href="/">Home</a></li>
+                    <li class="menu-register"><a href="{{ route('show.register') }}">Registration</a></li>
+                    <li class="menu-login"><a href="{{ route('show.login') }}">Login</a></li>
+                @endguest
 
+                @auth
+                    <li class="menu-home"><a href="{{ route('shop.index') }}">Home</li>
+                    <li class="menu-logout">
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit" class="menu__logout-button">
+                                <span class="logout">Logout</span>
+                            </button>
+                        </form>
+                    </li>
+                    <li class="menu-dashboard"><a href="">MyPage</a></li>
+                @endauth
+            </ul>
             <script>
                 function toggleMenu(element) {
                     element.classList.toggle("active");
@@ -32,15 +46,20 @@
                     const menu = document.querySelector('.menu');
                     const content = document.querySelector('.content');
                     const app = document.querySelector('.app');
+                    const body = document.body;
 
-                    if (menu.style.display === "block") {
-                        menu.style.display = "none";
+                    const isOpen = menu.classList.contains("menu--open");
+
+                    if (isOpen) {
+                        menu.classList.remove("menu--open");
                         content.style.display = "block";
-                        app.classList.remove('body--menu-open');
+                        app.classList.remove("body--menu-open");
+                        body.classList.remove("body--menu-open");
                     } else {
-                        menu.style.display = "block";
+                        menu.classList.add("menu--open");
                         content.style.display = "none";
-                        app.classList.add('body--menu-open');
+                        app.classList.add("body--menu-open");
+                        body.classList.add("body--menu-open");
                     }
                 }
             </script>
