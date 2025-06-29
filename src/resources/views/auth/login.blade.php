@@ -2,7 +2,7 @@
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/common.css')}}">
-<link rel="stylesheet" href="{{ asset('css/auth/register.css')}}">
+<link rel="stylesheet" href="{{ asset('css/auth/login.css')}}">
 @endsection
 
 @section('content')
@@ -12,7 +12,7 @@
         </div>
 
         <div class="login-form__inner">
-            <form action="{{ route('user.register') }}" class="login-form__form" method="post">
+            <form action="{{ route('user.login') }}" class="login-form__form" method="post">
                 @csrf
                 <div class="login-form__group--wrapper">
                     <img src="{{ asset('/images/email.png') }}" alt="" aria-hidden="true" class="email-img">

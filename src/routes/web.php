@@ -18,3 +18,4 @@ Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('show
 Route::post('/register', [AuthController::class, 'register'])->name('user.register');
 Route::get('/thanks', [AuthController::class, 'showThanksPage'])->name('show.thanks');
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('show.login');
+Route::post('/login', [AuthController::class, 'login'])->name('user.login');
